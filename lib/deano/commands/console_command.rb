@@ -1,5 +1,5 @@
-module Bowtie
-  class ConsoleCommand < Bowtie::EnvCommand
+module Deano
+  class ConsoleCommand < Deano::EnvCommand
 
     def self.command
       "console"

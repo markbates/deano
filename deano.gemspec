@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bowtie/version'
+require 'deano/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "bowtie"
-  gem.version       = Bowtie::VERSION
+  gem.name          = "deano"
+  gem.version       = Deano::VERSION
   gem.authors       = ["Mark Bates"]
   gem.email         = ["mark@markbates.com"]
   gem.description   = %q{A starter template and generators for Sinatra}

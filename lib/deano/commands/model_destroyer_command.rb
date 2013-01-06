@@ -1,5 +1,5 @@
-module Bowtie
-  class ModelDestroyer < Bowtie::NameCommand
+module Deano
+  class ModelDestroyer < Deano::NameCommand
 
     def self.command
       "destroy:model"

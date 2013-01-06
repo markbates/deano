@@ -1,4 +1,4 @@
-module Bowtie
+module Deano
 
   def self.template_dir
     File.expand_path(File.join("..", "..", "..", "template_app"), File.dirname(__FILE__))
@@ -42,7 +42,7 @@ module Bowtie
     end
 
     def template_path(*path)
-      File.expand_path(File.join(Bowtie.template_dir, *path))
+      File.expand_path(File.join(Deano.template_dir, *path))
     end
 
   end

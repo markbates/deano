@@ -1,5 +1,5 @@
-module Bowtie
-  class NameCommand < Bowtie::Command
+module Deano
+  class NameCommand < Deano::Command
 
     attr_accessor :args, :name
 
@@ -22,7 +22,7 @@ module Bowtie
     end
 
     def clean_string(f)
-      f.gsub(Bowtie.template_dir, @app_dir).gsub("template_app", self.underscored).gsub("TemplateApp", self.classified)
+      f.gsub(Deano.template_dir, @app_dir).gsub("template_app", self.underscored).gsub("TemplateApp", self.classified)
     end
 
   end

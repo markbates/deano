@@ -1,5 +1,5 @@
-module Bowtie
-  class EnvCommand < Bowtie::Command
+module Deano
+  class EnvCommand < Deano::Command
     include FileUtils
 
     attr_accessor :args, :env

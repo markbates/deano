@@ -1,5 +1,5 @@
-module Bowtie
-  class AppDestroyer < Bowtie::NameCommand
+module Deano
+  class AppDestroyer < Deano::NameCommand
 
     def self.command
       "destroy:app"

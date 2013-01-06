@@ -1,5 +1,5 @@
-module Bowtie
-  class AppGenerator < Bowtie::NameCommand
+module Deano
+  class AppGenerator < Deano::NameCommand
 
     def self.command
       "generate:app"

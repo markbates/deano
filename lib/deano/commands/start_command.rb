@@ -1,5 +1,5 @@
-module Bowtie
-  class StartCommand < Bowtie::EnvCommand
+module Deano
+  class StartCommand < Deano::EnvCommand
 
     def self.command
       "start"

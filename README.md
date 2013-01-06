@@ -1,4 +1,4 @@
-# Bowtie::Template
+# Deano::Template
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'bowtie'
+    gem 'deano'
 
 And then execute:
 
@@ -14,15 +14,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bowtie
+    $ gem install deano
 
 ## Generating a New Project
 
 ```bash
-$ bowtie new awesome_app
+$ deano new awesome_app
 $ cd awesome_app
 $ bundle
-$ bowtie start
+$ deano start
 ```
 
 ## Testing
@@ -36,48 +36,48 @@ $ rake
 
 ```bash
 $ cd awesome_app
-$ bowtie start [environment]
+$ deano start [environment]
 ```
 
 ## Console
 
 ```bash
 $ cd awesome_app
-$ bowtie console [environment]
+$ deano console [environment]
 ```
 
 ## Generating a New App
 
 ```bash
 $ cd awesome_app
-$ bowtie generate:app foo_app
+$ deano generate:app foo_app
 ```
 
 ### Destroying a New App
 
 ```bash
 $ cd awesome_app
-$ bowtie destroy:app foo_app
+$ deano destroy:app foo_app
 ```
 
 ## Generating a New Model
 
 ```bash
 $ cd awesome_app
-$ bowtie generate:model user
+$ deano generate:model user
 ```
 
 ### Destroying a New Model
 
 ```bash
 $ cd awesome_app
-$ bowtie destroy:model user
+$ deano destroy:model user
 ```
 
 ## Help
 
 ```bash
-$ bowtie help
+$ deano help
 ```
 
 ## Contributing

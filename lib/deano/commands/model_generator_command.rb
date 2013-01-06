@@ -1,5 +1,5 @@
-module Bowtie
-  class ModelGenerator < Bowtie::NameCommand
+module Deano
+  class ModelGenerator < Deano::NameCommand
 
     def self.command
       "generate:model"

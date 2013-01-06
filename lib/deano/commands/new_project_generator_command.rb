@@ -1,5 +1,5 @@
-module Bowtie
-  class NewProjectGenerator < Bowtie::NameCommand
+module Deano
+  class NewProjectGenerator < Deano::NameCommand
 
     def self.command
       "new"
