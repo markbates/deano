@@ -8,6 +8,7 @@ gem 'shotgun'
 gem 'foreman'
 gem 'mongoid'
 gem 'activesupport'
+gem 'eco'
 
 group :development, :test do
   gem 'rack-test'
