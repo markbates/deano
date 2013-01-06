@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Sinatra::Template::VERSION
   gem.authors       = ["Mark Bates"]
   gem.email         = ["mark@markbates.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A starter template and generators for Sinatra}
+  gem.summary       = %q{A starter template and generators for Sinatra}
   gem.homepage      = ""
   gem.license       = "MIT"
 

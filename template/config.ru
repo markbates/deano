@@ -11,6 +11,9 @@ map '/assets' do
   run environment
 end
 
-
 use Rack::MethodOverride
-run MyApp
+
+map "/" do
+  run MyApp
+end
+

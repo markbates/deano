@@ -16,7 +16,7 @@ Or install it yourself as:
 
     $ gem install sinatra-template
 
-## Usage
+## Generating a New Project
 
 ```bash
 $ sinatra new awesome_app
@@ -30,6 +30,54 @@ $ foreman start
 ```bash
 $ cd awesome_app
 $ rake
+```
+
+## Starting
+
+```bash
+$ cd awesome_app
+$ sinatra start [environment]
+```
+
+## Console
+
+```bash
+$ cd awesome_app
+$ sinatra console [environment]
+```
+
+## Generating a New App
+
+```bash
+$ cd awesome_app
+$ sinatra generate:app foo_app
+```
+
+### Destroying a New App
+
+```bash
+$ cd awesome_app
+$ sinatra destroy:app foo_app
+```
+
+## Generating a New Model
+
+```bash
+$ cd awesome_app
+$ sinatra generate:model user
+```
+
+### Destroying a New Model
+
+```bash
+$ cd awesome_app
+$ sinatra destroy:model user
+```
+
+## Help
+
+```bash
+$ sinatra help
 ```
 
 ## Contributing

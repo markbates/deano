@@ -9,7 +9,7 @@ describe MyApp do
   it "says hello" do
     get '/'
     last_response.should be_ok
-    last_response.body.should match("Hello World!")
+    last_response.body.should match("MyApp!")
   end
 
 end
