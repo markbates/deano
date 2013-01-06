@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe MyApp do
+describe TemplateApp do
   
   def app
-    MyApp
+    TemplateApp
   end
 
   it "says hello" do
     get '/'
     last_response.should be_ok
-    last_response.body.should match("MyApp!")
+    last_response.body.should match("TemplateApp!")
   end
 
 end

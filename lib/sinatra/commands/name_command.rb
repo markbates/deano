@@ -22,7 +22,7 @@ module Sinatra
     end
 
     def clean_string(f)
-      f.gsub(Sinatra.template_dir, @app_dir).gsub("my_app", self.underscored).gsub("MyApp", self.classified)
+      f.gsub(Sinatra.template_dir, @app_dir).gsub("template_app", self.underscored).gsub("TemplateApp", self.classified)
     end
 
   end

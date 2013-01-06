@@ -14,6 +14,6 @@ end
 use Rack::MethodOverride
 
 map "/" do
-  run MyApp
+  run TemplateApp
 end
 
