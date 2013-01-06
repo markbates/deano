@@ -1,38 +1,29 @@
-# Sinatra Template
+# Sinatra::Template
 
-This is my starter for building Sinatra applications. Take it for what it is.
+TODO: Write a gem description
 
-## Generate a New Application
+## Installation
 
-First download the repo locally:
+Add this line to your application's Gemfile:
 
-```bash
-$ git clone git://github.com/markbates/sinatra-template.git
-```
+    gem 'sinatra-template'
 
-Second run the generate command against the directory you want to create:
+And then execute:
 
-```bash
-$ ruby PATH/TO/generate.rb awesome_app
-```
+    $ bundle
 
-```bash
-$ cd awesome_app
-$ bundle
-```
+Or install it yourself as:
 
-That's it! You're new application should be generated.
+    $ gem install sinatra-template
 
-## Run the Application
+## Usage
 
-```bash
-$ cd awesome_app
-$ foreman start
-```
+TODO: Write usage instructions here
 
-## Tests
+## Contributing
 
-```bash
-$ cd awesome_app
-$ rake
-```
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request

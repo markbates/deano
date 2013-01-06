@@ -1,3 +1,1 @@
-task :default do
-  system "bundle exec rspec"
-end
+require "bundler/gem_tasks"
