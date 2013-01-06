@@ -1,0 +1,28 @@
+development:
+  sessions:
+    default:
+      database: my_app_development
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      database: my_app_test
+      hosts:
+        - localhost:27017
+
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        use_utc: true
+
+staging:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        use_utc: true
