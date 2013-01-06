@@ -2,7 +2,10 @@ require 'bundler'
 Bundler.setup
 
 require 'active_support/core_ext'
-require 'sinatra/base'
+require 'deano/base'
+
+Deano.root = File.dirname(__FILE__)
+
 require 'sinatra/twitter-bootstrap'
 require 'sprockets'
 require 'mongoid'
