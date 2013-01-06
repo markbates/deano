@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+$ sinatra new awesome_app
+$ cd awesome_app
+$ bundle
+$ foreman start
+```
+
+## Testing
+
+```bash
+$ cd awesome_app
+$ rake
+```
 
 ## Contributing
 

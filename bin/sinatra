@@ -1,0 +1,52 @@
+require 'active_support/core_ext'
+require 'fileutils'
+
+$template_dir = File.expand_path(File.join("..", "template"), File.dirname(__FILE__))
+
+command = ARGV[0]
+
+class GenerateCommand
+  include FileUtils
+
+  attr_accessor :args, :name
+
+  def initialize(args)
+    self.args = args
+    self.name = ARGV[1]
+  end
+
+  def clean_string(f)
+    f.gsub($template_dir, @app_dir).gsub("my_app", self.name.underscore).gsub("MyApp", self.name.classify)
+  end
+
+end
+
+class AppGenerator < GenerateCommand
+
+  def initialize(*args)
+    super
+    @app_dir = File.expand_path(File.join(pwd, self.name.underscore))
+  end
+
+  def generate
+    mkdir self.name.underscore, verbose: true
+    
+
+    Dir[File.expand_path(File.join("**", "*"), $template_dir)].each do |f|
+      if File.directory?(f)
+        mkdir_p clean_string(f), verbose: true
+      else
+        mkdir_p clean_string(File.dirname(f)), verbose: true
+        File.open(clean_string(f), 'w') do |file|
+          file.puts clean_string(File.read(f))
+        end
+      end
+    end
+  end
+
+end
+
+case command
+when 'new'
+  AppGenerator.new(ARGV).generate
+end
