@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.setup
 
+require 'active_support/core_ext'
 require 'sinatra/base'
 require 'sinatra/twitter-bootstrap'
 require 'sprockets'

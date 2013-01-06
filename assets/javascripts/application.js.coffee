@@ -4,4 +4,4 @@
 #= require backbone
 
 $ ->
-  alert "hello!"
+  $("#main").append("jQuery works!")

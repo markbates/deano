@@ -7,6 +7,7 @@ gem 'sprockets'
 gem 'shotgun'
 gem 'foreman'
 gem 'mongoid'
+gem 'activesupport'
 
 group :development, :test do
   gem 'rack-test'
