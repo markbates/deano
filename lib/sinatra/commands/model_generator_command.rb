@@ -9,14 +9,9 @@ module Sinatra
       "model_name"
     end
 
-    def initialize(*args)
-      super
-      @app_dir = File.expand_path(pwd)
-    end
-
     def call
-      path = File.expand_path(File.join(@app_dir, "models", "#{self.underscored}.rb"))
-      mkdir_p File.dirname(path), verbose: true
+      path = app_path("models", "#{self.underscored}.rb")
+      FileUtils.mkdir_p File.dirname(path), verbose: true
       File.open(path, 'w') do |file|
         file.puts <<-EOF
   class #{self.classified}
@@ -27,8 +22,8 @@ module Sinatra
         EOF
       end
 
-      path = File.expand_path(File.join(@app_dir, "spec", "models", "#{self.underscored}_spec.rb"))
-      mkdir_p File.dirname(path), verbose: true
+      path = app_path("spec", "models", "#{self.underscored}_spec.rb")
+      FileUtils.mkdir_p File.dirname(path), verbose: true
       File.open(path, 'w') do |file|
         file.puts <<-EOF
   require 'spec_helper'

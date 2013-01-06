@@ -11,7 +11,7 @@ module Sinatra
 
     def initialize(*args)
       super
-      @app_dir = File.expand_path(File.join(pwd, self.underscored))
+      @app_dir = File.expand_path(File.join(FileUtils.pwd, self.underscored))
     end
 
     def classified
@@ -20,11 +20,11 @@ module Sinatra
 
     def call
       mkdir self.underscored, verbose: true
-      Dir[File.expand_path(File.join("**", "*"), Sinatra.template_dir)].each do |f|
+      Dir[template_path("**", "*")].each do |f|
         if File.directory?(f)
-          mkdir_p clean_string(f), verbose: true
+          FileUtils.mkdir_p clean_string(f), verbose: true
         else
-          mkdir_p clean_string(File.dirname(f)), verbose: true
+          FileUtils.mkdir_p clean_string(File.dirname(f)), verbose: true
           File.open(clean_string(f), 'w') do |file|
             file.puts clean_string(File.read(f))
           end

@@ -1,6 +1,5 @@
 module Sinatra
   class NameCommand < Sinatra::Command
-    include FileUtils
 
     attr_accessor :args, :name
 
@@ -19,6 +18,7 @@ module Sinatra
     def initialize(args)
       self.args = args
       self.name = ARGV[1]
+      @app_dir = File.expand_path(FileUtils.pwd)
     end
 
     def clean_string(f)

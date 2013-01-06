@@ -10,11 +10,11 @@ module Sinatra
     end
 
     def call
-      path = File.expand_path(File.join(@app_dir, "Procfile.#{self.env}"))
+      path = app_path("Procfile.#{self.env}")
       if File.exists?(path)
         cmd "bundle exec foreman start -f #{path}"
       else
-        path = File.expand_path(File.join(@app_dir, "Procfile"))
+        path = app_path("Procfile")
         cmd "bundle exec foreman start -f #{path}"
       end
     end

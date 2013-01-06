@@ -10,7 +10,7 @@ module Sinatra
 
     def initialize(args)
       self.args = args
-      @app_dir = File.expand_path(pwd)
+      @app_dir = File.expand_path(FileUtils.pwd)
       self.env = args[1] || "development"
       ENV["RACK_ENV"] = self.env
     end

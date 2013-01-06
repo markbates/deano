@@ -10,7 +10,7 @@ module Sinatra
     end
 
     def call
-      path = File.expand_path(File.join(@app_dir, "setup.rb"))
+      path = app_path("setup.rb")
       cmd "pry -r #{path}"
     end
 

@@ -23,5 +23,27 @@ module Sinatra
       system command
     end
 
+    def rm(path)
+      begin
+        FileUtils.rm path, verbose: true
+      rescue Errno::ENOENT => e
+      end
+    end
+
+    def rm_r(path)
+      begin
+        FileUtils.rm_r path, verbose: true
+      rescue Errno::ENOENT => e
+      end
+    end
+
+    def app_path(*path)
+      File.expand_path(File.join(@app_dir, *path))
+    end
+
+    def template_path(*path)
+      File.expand_path(File.join(Sinatra.template_dir, *path))
+    end
+
   end
 end

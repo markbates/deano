@@ -8,34 +8,28 @@ module Sinatra
     def self.help
       "app_name"
     end
-    
-    def initialize(*args)
-      super
-      @app_dir = File.expand_path(pwd)
-    end
 
     def classified
       "#{self.name.classify}App"
     end
 
     def call
-      path = File.expand_path(File.join(@app_dir, "apps", "#{self.underscored}.rb"))
-      begin
-        rm path, verbose: true
-      rescue Errno::ENOENT => e
-      end
-      path = File.expand_path(File.join(@app_dir, "apps", "views", self.underscored))
-      begin
-        rm_r path, verbose: true
-      rescue Errno::ENOENT => e
-      end
-      path = File.expand_path(File.join(@app_dir, "spec", "apps", "#{self.underscored}_spec.rb"))
-      begin
-        rm path, verbose: true
-      rescue Errno::ENOENT => e
-      end
+      path = app_path("apps", "#{self.underscored}.rb")
+      rm path
 
-      path = File.expand_path(File.join(@app_dir, "config.ru"))
+      path = app_path("apps", "views", self.underscored)
+      rm_r path
+
+      path = app_path("spec", "apps", "#{self.underscored}_spec.rb")
+      rm path
+
+      path = app_path("assets", "javascripts", "#{self.underscored}.js.coffee")
+      rm path
+
+      path = app_path("assets", "stylesheets", "#{self.underscored}.css.scss")
+      rm path
+
+      path = app_path("config.ru")
       old = File.read(path)
       File.open(path, "w") do |file|
         map = <<-EOF
