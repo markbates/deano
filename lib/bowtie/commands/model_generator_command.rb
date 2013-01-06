@@ -1,5 +1,5 @@
-module Sinatra
-  class ModelGenerator < Sinatra::NameCommand
+module Bowtie
+  class ModelGenerator < Bowtie::NameCommand
 
     def self.command
       "generate:model"

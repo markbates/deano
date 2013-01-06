@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sinatra/template/version'
+require 'bowtie/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "sinatra-template"
-  gem.version       = Sinatra::Template::VERSION
+  gem.name          = "bowtie"
+  gem.version       = Bowtie::VERSION
   gem.authors       = ["Mark Bates"]
   gem.email         = ["mark@markbates.com"]
   gem.description   = %q{A starter template and generators for Sinatra}

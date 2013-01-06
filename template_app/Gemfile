@@ -9,6 +9,7 @@ gem 'foreman'
 gem 'mongoid'
 gem 'activesupport'
 gem 'eco'
+gem 'bowtie'
 
 group :development, :test do
   gem 'rack-test'

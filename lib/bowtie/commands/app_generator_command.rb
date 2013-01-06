@@ -1,5 +1,5 @@
-module Sinatra
-  class AppGenerator < Sinatra::NameCommand
+module Bowtie
+  class AppGenerator < Bowtie::NameCommand
 
     def self.command
       "generate:app"

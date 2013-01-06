@@ -1,5 +1,5 @@
-module Sinatra
-  class EnvCommand < Sinatra::Command
+module Bowtie
+  class EnvCommand < Bowtie::Command
     include FileUtils
 
     attr_accessor :args, :env

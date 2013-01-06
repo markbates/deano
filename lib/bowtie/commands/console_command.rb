@@ -1,5 +1,5 @@
-module Sinatra
-  class ConsoleCommand < Sinatra::EnvCommand
+module Bowtie
+  class ConsoleCommand < Bowtie::EnvCommand
 
     def self.command
       "console"

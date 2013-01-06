@@ -1,4 +1,4 @@
-# Sinatra::Template
+# Bowtie::Template
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'sinatra-template'
+    gem 'bowtie'
 
 And then execute:
 
@@ -14,15 +14,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sinatra-template
+    $ gem install bowtie
 
 ## Generating a New Project
 
 ```bash
-$ sinatra new awesome_app
+$ bowtie new awesome_app
 $ cd awesome_app
 $ bundle
-$ foreman start
+$ bowtie start
 ```
 
 ## Testing
@@ -36,48 +36,48 @@ $ rake
 
 ```bash
 $ cd awesome_app
-$ sinatra start [environment]
+$ bowtie start [environment]
 ```
 
 ## Console
 
 ```bash
 $ cd awesome_app
-$ sinatra console [environment]
+$ bowtie console [environment]
 ```
 
 ## Generating a New App
 
 ```bash
 $ cd awesome_app
-$ sinatra generate:app foo_app
+$ bowtie generate:app foo_app
 ```
 
 ### Destroying a New App
 
 ```bash
 $ cd awesome_app
-$ sinatra destroy:app foo_app
+$ bowtie destroy:app foo_app
 ```
 
 ## Generating a New Model
 
 ```bash
 $ cd awesome_app
-$ sinatra generate:model user
+$ bowtie generate:model user
 ```
 
 ### Destroying a New Model
 
 ```bash
 $ cd awesome_app
-$ sinatra destroy:model user
+$ bowtie destroy:model user
 ```
 
 ## Help
 
 ```bash
-$ sinatra help
+$ bowtie help
 ```
 
 ## Contributing

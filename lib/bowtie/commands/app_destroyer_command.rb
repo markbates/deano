@@ -1,5 +1,5 @@
-module Sinatra
-  class AppDestroyer < Sinatra::NameCommand
+module Bowtie
+  class AppDestroyer < Bowtie::NameCommand
 
     def self.command
       "destroy:app"

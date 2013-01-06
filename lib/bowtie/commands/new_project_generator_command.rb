@@ -1,5 +1,5 @@
-module Sinatra
-  class NewProjectGenerator < Sinatra::NameCommand
+module Bowtie
+  class NewProjectGenerator < Bowtie::NameCommand
 
     def self.command
       "new"
@@ -33,6 +33,7 @@ module Sinatra
       File.open(app_path(".gitignore"), "w") do |f|
         f.puts File.read(template_path(".gitignore"))
       end
+      rm app_path("Gemfile.lock")
       Dir[app_path("**", "*")].each do |file|
         if File.directory?(file)
           if Dir[File.join(file, "**", "*")].empty?
@@ -41,6 +42,7 @@ module Sinatra
         end
       end
       FileUtils.cd app_path
+      system "bundle"
       system "git init"
       system "git add ."
       system "git commit -a -m 'Initial Commit'"

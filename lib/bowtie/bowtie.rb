@@ -1,6 +1,6 @@
-require "sinatra/template/version"
+require "bowtie/template/version"
 
-module Sinatra
+module Bowtie
   module Template
     # Your code goes here...
   end

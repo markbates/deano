@@ -1,5 +1,5 @@
-module Sinatra
-  class NameCommand < Sinatra::Command
+module Bowtie
+  class NameCommand < Bowtie::Command
 
     attr_accessor :args, :name
 
@@ -22,7 +22,7 @@ module Sinatra
     end
 
     def clean_string(f)
-      f.gsub(Sinatra.template_dir, @app_dir).gsub("template_app", self.underscored).gsub("TemplateApp", self.classified)
+      f.gsub(Bowtie.template_dir, @app_dir).gsub("template_app", self.underscored).gsub("TemplateApp", self.classified)
     end
 
   end

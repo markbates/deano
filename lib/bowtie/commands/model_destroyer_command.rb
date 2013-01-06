@@ -1,5 +1,5 @@
-module Sinatra
-  class ModelDestroyer < Sinatra::NameCommand
+module Bowtie
+  class ModelDestroyer < Bowtie::NameCommand
 
     def self.command
       "destroy:model"

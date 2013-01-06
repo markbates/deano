@@ -1,5 +1,5 @@
-module Sinatra
-  class StartCommand < Sinatra::EnvCommand
+module Bowtie
+  class StartCommand < Bowtie::EnvCommand
 
     def self.command
       "start"
