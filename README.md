@@ -1,6 +1,8 @@
-# Deano::Template
+# Deano
 
-TODO: Write a gem description
+A starter template and generators for Sinatra. This project is _incredibly_ opinionated. It will set up an asset pipeline using Sprockets. It sets up Twitter Bootstrap, RSpec, Mongoid, and Backbone as well.
+
+Use at your own risk.
 
 ## Installation
 
