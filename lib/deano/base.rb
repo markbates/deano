@@ -18,5 +18,9 @@ module Deano
       Array(views).each { |v| super(v, name, engine, &block) }
     end
 
+    before do
+      puts "[#{request.request_method}] #{request.url}"
+    end
+
   end
 end
