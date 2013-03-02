@@ -9,7 +9,7 @@ gem 'sinatra'
 gem "sinatra-twitter-bootstrap", github: "mifo/sinatra-twitter-bootstrap"
 gem 'sprockets'
 gem 'shotgun'
-gem 'foreman'
+gem 'foreman', '0.60.0'
 gem 'mongoid'
 gem 'activesupport'
 gem 'eco'
