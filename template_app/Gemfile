@@ -4,7 +4,7 @@ gem 'thin'
 gem 'sass'
 gem 'coffee-script'
 gem 'sinatra'
-gem "sinatra-twitter-bootstrap", github: "mifo/sinatra-twitter-bootstrap"
+gem "sinatra-twitter-bootstrap"
 gem 'sprockets'
 gem 'shotgun'
 gem 'foreman', '0.60.0'
