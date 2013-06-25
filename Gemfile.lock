@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    deano (1.2.0)
+    deano (1.2.1)
 
 GEM
   remote: https://rubygems.org/
